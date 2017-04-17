@@ -1,0 +1,32 @@
+id: 1a5b7a58-9cf9-4fe5-a034-635db979ceb6
+version: v2
+name: Winterfell
+apptype: api
+language: java
+containerName: winterfell
+toolchain:
+  id: 58f106ec8ef1e7001e4218c5
+  name: Qubeship-Java-Toolchain
+opinion:
+  id: 58f106ece936e0000b15134b
+  name: Qubeship default opinion
+endpoint:
+  id: 58f106ec238503000b74d7bd
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+  - name: APP_VERSION
+    value: v0.1
+build:
+  compile:
+    publish:
+     - target/
+bake:
+  skip: false
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: false
+
